@@ -1,0 +1,127 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #34495e, #2c3e50);
+    margin: 0;
+}
+
+.container {
+    background: #ecf0f1;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+input {
+    width: calc(100% - 24px); /* Adjust width to fit within padding */
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    background: #f7f9f9;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#answers button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 2px solid #3498db;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#answers button.selected {
+    background: #3498db;
+    color: white;
+}
+
+#answers button:hover {
+    background: #2980b9;
+    color: white;
+    border-color: #2980b9;
+}
+
+#timer {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.circular-progress {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 calc(var(--percentage) * 1%),
+        #ddd calc(var(--percentage) * 1%)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+}
+
+.circular-progress .inner-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress .percentage {
+    font-size: 1.5em;
+    font-weight: bold;
+}
